@@ -16,13 +16,13 @@ services:
   grafana:
     image: "grafana/grafana"
     environment:
-      - GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s/grafana
+      - GF_SERVER_ROOT_URL=%(protocol)s://137.117.88.184/grafana
       - GF_AUTH_ANONYMOUS_ENABLED=true
     volumes:
       - ./monitoring/grafana/provisioning/:/etc/grafana/provisioning/
       - grafana:/var/lib/grafana
     ports:
-      - "6000:3000"
+      - "3001:3000"
 
 volumes:
   prometheus:
