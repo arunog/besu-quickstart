@@ -16,8 +16,8 @@ services:
   grafana:
     image: "grafana/grafana"
     environment:
-      - GF_SERVER_ROOT_URL=%(protocol)s://137.117.88.184/grafana
-      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
     volumes:
       - ./monitoring/grafana/provisioning/:/etc/grafana/provisioning/
       - grafana:/var/lib/grafana
