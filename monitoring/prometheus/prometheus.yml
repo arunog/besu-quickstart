@@ -27,3 +27,8 @@ scrape_configs:
       static_configs:
         - targets: [ 137.117.88.184:9545 ]
 
+    - job_name: 'node_exporter_metrics'
+      scrape_interval: 5s
+      static_configs:
+      - targets: ['137.117.88.184:9100']
+
